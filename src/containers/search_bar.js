@@ -21,16 +21,13 @@ class SearchBar extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
-
     // We need to fetch post data from the subreddit
     this.props.fetchPosts(this.state.term)
-
-    this.setState({term: ''});
   }
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit} className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group search-bar">
         <input 
           placeholder="Search for a subreddit"
           className="form-control"

@@ -1,10 +1,14 @@
-.App {
-  font-family: sans-serif;
+.app-content {
+  margin-top: 6rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 6rem;
-  padding: 2rem;
-  color: white;
+@media (max-width: 767px) {
+  .app-content {
+    margin-top: 12rem; 
+  }
+}
+
+.search-bar {
+	margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
