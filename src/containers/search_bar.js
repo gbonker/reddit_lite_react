@@ -8,11 +8,13 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: ''
+      term: localStorage.getItem("previousTerm") || ''
     };
 
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
+
+    this.props.fetchPosts(this.state.term);
   }
 
   onInputChange(event) {
@@ -23,6 +25,8 @@ class SearchBar extends Component {
     event.preventDefault();
     // We need to fetch post data from the subreddit
     this.props.fetchPosts(this.state.term)
+
+    localStorage.setItem("previousTerm", this.state.term);
   }
 
   render() {
