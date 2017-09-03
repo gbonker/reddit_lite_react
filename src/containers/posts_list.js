@@ -40,8 +40,13 @@ class PostsList extends Component {
         <p>Make sure you are spelling the subreddit correctly.</p>
       </div>
     }
+    var term = localStorage.getItem("previousTerm");
+    if (term === '') {
+      term = 'popular';
+    }
     return (
       <div className="container">
+        <h1>/r/{term}</h1>
         {prompt}
         {posts.map(this.renderPost)}
       </div>
