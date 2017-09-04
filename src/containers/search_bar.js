@@ -8,7 +8,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: localStorage.getItem("previousTerm") || ''
+      term: localStorage.getItem("previousTerm") || 'popular'
     };
 
     this.onInputChange = this.onInputChange.bind(this);

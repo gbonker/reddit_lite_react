@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../style/App.css';
 
-import SearchBar from './containers/search_bar';
-import PostsList from './containers/posts_list';
+import SearchBar from '../containers/search_bar';
+import PostsList from '../containers/posts_list';
 
 class App extends Component {
   render() {
