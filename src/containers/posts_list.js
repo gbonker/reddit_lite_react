@@ -41,7 +41,7 @@ class PostsList extends Component {
       </div>
     }
     var term = localStorage.getItem("previousTerm");
-    if (term === '') {
+    if (term === '' || term === null) {
       term = 'popular';
     }
     return (
