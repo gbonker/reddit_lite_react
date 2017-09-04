@@ -35,7 +35,7 @@ class PostsList extends Component {
     if (this.props.posts[0] !== undefined) {
       posts = this.props.posts[0].data.children;
     } else {
-      prompt = <div>
+      prompt = <div tabIndex="0">
         <p>Search for your favorite subreddit using the search bar above.</p>
         <p>Make sure you are spelling the subreddit correctly.</p>
       </div>
@@ -46,7 +46,7 @@ class PostsList extends Component {
     }
     return (
       <div className="container">
-        <h1>/r/{term}</h1>
+        <h1 tabIndex="0">/r/{term}</h1>
         {prompt}
         {posts.map(this.renderPost)}
       </div>

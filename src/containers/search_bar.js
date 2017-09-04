@@ -37,7 +37,11 @@ class SearchBar extends Component {
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange}
+          aria-describedby="search-bar-help"
         />
+        <div id="search-bar-help" className="offscreen">
+          For example, to see content from reddit.com/r/cats, enter "cats" and the first 25 posts on /r/cats will appear below.
+        </div>
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Search</button>
         </span>
